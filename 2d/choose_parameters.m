@@ -1093,17 +1093,17 @@ function choose_parameters()
     
 
     
-    % Vérifier qu'on a des données
+    % Check that we have data
     if isempty(donnees)
         cla(h.cpu_ax);
         title(h.cpu_ax, 'No valid data for selected study type');
         return;
     end
     
-    % ---- Appeler ta fonction avec TOUS les L ----
+    % ---- Call your function with ALL L values ----
     plot_cpu_comparaison_axes(h.cpu_ax, donnees, noms_schemas, logx, logy, xmode);
     
-    % Ajouter un titre approprié
+    % Add appropriate title
     if study_type == 1
         title(h.cpu_ax, 'CPU Time vs Mesh Size (All L values)', ...
             'FontSize', 14, 'FontWeight', 'bold');
@@ -1112,7 +1112,6 @@ function choose_parameters()
             'FontSize', 14, 'FontWeight', 'bold');
     end
 end
-
 
 % =========================================================================
 % SAVE & RUN
@@ -2039,3 +2038,4 @@ end % Final end of main function
 
 
 % end % dernier end de la fonction principal
+
