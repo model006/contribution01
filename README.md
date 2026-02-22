@@ -168,4 +168,28 @@ After the computation finishes, you can visualize the results directly within th
 3.  The interface will display the result image as shown below.
 
 <a id="fig-2d-interface"></a>
-![2D Interface Results](readme_figures/Couled_Richards_Eq_2_Def_Porous_Media_2d_JavaCap_Tab.png)
+![2D Interface Results](readme_figures/Couled_Richards_Eq_2_Def_Porous_Media_2d_JavaCap_Tab.png).
+
+#### Post-computation visualization in batch mode (HPC)
+
+**Important**: The `main.m` files are the main programs for 2D and 3D simulations. They can be executed **directly in batch mode (without GUI)**, whether for quick testing or for intensive computations on an HPC cluster.
+
+The graphical user interface is an optional wrapper, primarily useful for:
+- Code familiarization
+- Interactive testing
+- Immediate result visualization
+
+In practice, for intensive computations on an HPC cluster:
+
+1. **Prepare your submission scripts**: Create `main.sh` batch files.
+2. **Launch the computations**: Submit these scripts to your cluster job scheduler (e.g., SLURM).
+3. **Results are automatically saved**: Output files are stored in the dedicated `2d/` and `3d/` folders (located in the same directory as the scripts), whether you use the GUI or batch mode.
+4. **Post-computation visualization**: Once the computations are complete, use the dedicated post-processing functions to visualize the data:
+
+    ```matlab
+    % To visualize 2D results
+    postprocess_2d
+    
+    % To visualize 3D results
+    postprocess_3d
+    ```
