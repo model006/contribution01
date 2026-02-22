@@ -161,4 +161,11 @@ All parameters shown in [Figure 2](#fig-2d-interface) are set to their default v
 
 #### View results
 
-You can click on the **Visualization 3** tab at the top, section (a). Instructions have been provided to guide you in accessing the requested data.
+After the computation finishes, you can visualize the results directly within the interface.
+
+1.  Click on the **Visualization** tab at the top of the main interface window.
+2.  In the dropdown menu that appears, select the **section (a)** corresponding to the 2D outputs.
+3.  The interface will display the result image as shown below.
+
+<a id="fig-2d-interface"></a>
+![2D Interface Results](readme_figures/Couled_Richards_Eq_2_Def_Porous_Media_2d_JavaCap_Tab.png)
